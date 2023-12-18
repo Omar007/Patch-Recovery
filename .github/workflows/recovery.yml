@@ -27,7 +27,7 @@ jobs:
       run: |
         ls
         pwd
-        wget --no-check-certificate ${{ github.event.inputs.RECOVERY_URL }}
+        wget --no-check-certificate -O recovery.img ${{ github.event.inputs.RECOVERY_URL }}
 
     - name: Patch Process-1
       run: |
