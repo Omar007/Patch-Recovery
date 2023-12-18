@@ -9,7 +9,7 @@ on:
         default: 'https://transfer.sh/(RECOMMENDED)'
 
 env:
-  RECOVERY_URL: https://oshi.at/Rpjg
+  RECOVERY_URL: 'https://transfer.sh/(RECOMMENDED)'
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
       run: |
         ls
         pwd
-        wget ${{github.event.inputs.RECOVERY_URL }}
+        wget --no-check-certificate ${{ github.event.inputs.RECOVERY_URL }}
 
     - name: Patch Process-1
       run: |
